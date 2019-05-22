@@ -18,9 +18,9 @@ Esta app foi adaptada do exemplo contido [neste artigo](https://www.tutorialrepu
 
 2. Criando a configuração de deploy da aplicação:
 
-    2.1 **No diretório raiz do projeto** crie um arquivo com o nome **docker-compose.yml** (É muito importante que este nome seja respeitado na criação do arquivo);
+2.1 **No diretório raiz do projeto** crie um arquivo com o nome **docker-compose.yml** (É muito importante que este nome seja respeitado na criação do arquivo);
 
-    2.2 Preencha a configuração do arquivo com o seguinte conteúdo:
+2.2 Preencha a configuração do arquivo com o seguinte conteúdo:
 
 ```sh
 version: '2'
@@ -58,7 +58,7 @@ networks:
     driver: bridge
 ```
 
-    2.3 Faça um commit desta alteração no seu repositório;
+2.3 Faça um commit desta alteração no seu repositório;
 
 3. Acesso ao servidor de teste da Aplicação:
 
@@ -99,7 +99,8 @@ docker-compose up -d
 docker ps
 ```
 
-**Finalmente com a aplicação em execução faça o acesso no navegador pelo mesmo endereço usado para Login: nac-rm<seu_rm>.fiapdev.com**
+Finalmente com a aplicação em execução faça o acesso no navegador pelo mesmo endereço usado para Login:
+- **nac-rm<seu_rm>.fiapdev.com**
 
 ---
 
