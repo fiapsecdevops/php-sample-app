@@ -18,47 +18,37 @@ Esta app foi adaptada do exemplo contido [neste artigo](https://www.tutorialrepu
 
 2. Criando a configuração de deploy da aplicação:
 
-    2.1 **No diretório raiz do projeto** crie um arquivo com o nome **docker-compose.yml** (É muito importante que este nome seja respeitado na criação do arquivo);
+2.1 **No diretório raiz do projeto** crie um arquivo com o nome **docker-compose.yml** (É muito importante que este nome seja respeitado na criação do arquivo);
 
-    2.2 Preencha a configuração do arquivo com o seguinte conteúdo:
+2.2 Preencha a configuração do arquivo com o seguinte conteúdo:
 
 ```sh
-version: '2'
-services:
-  db:
-    build: ./backend
-    restart: always
-    ports:
-      - "${MYSQL_PORT}:3306"
-    volumes:
-      - /var/lib/mysql
-    environment:
-      - MYSQL_USER=${DB_USERNAME}
-      - MYSQL_PASSWORD={DB_PASSWORD}
-      - MYSQL_DATABASE=${DB_NAME}
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-      - MYSQL_ALLOW_EMPTY_PASSWORD='yes'
-    env_file: ./.env
-    networks:
-      - php-app-network
-  php:
-    build: ./frontend
-    restart: always
-    ports:
-      - "${PHP_PORT}:80"
-    volumes:
-      - ./frontend:/var/www/html
-    env_file: ./.env
-    links:
-      - db
-    networks:
-      - php-app-network
-networks:
-  php-app-network:
-    driver: bridge
+db:
+  build: ./backend
+  restart: always
+  ports:
+    - "${MYSQL_PORT}:3306"
+  volumes:
+    - /var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+    - MYSQL_USER=${DB_USERNAME}
+    - MYSQL_PASSWORD=${DB_PASSWORD}
+    - MYSQL_DATABASE=${DB_NAME}
+  env_file: ./.env
+php:
+  build: ./frontend
+  restart: always
+  ports:
+    - "${PHP_PORT}:80"
+  volumes:
+    - ./frontend:/var/www/html
+  env_file: ./.env
+  links:
+    - db
 ```
 
-    2.3 Faça um commit desta alteração no seu repositório;
+2.3 Faça um commit desta alteração no seu repositório;
 
 3. Acesso ao servidor de teste da Aplicação:
 
@@ -99,7 +89,8 @@ docker-compose up -d
 docker ps
 ```
 
-**Finalmente com a aplicação em execução faça o acesso no navegador pelo mesmo endereço usado para Login: nac-rm<seu_rm>.fiapdev.com**
+Finalmente com a aplicação em execução faça o acesso no navegador pelo mesmo endereço usado para Login:
+- **nac-rm<seu_rm>.fiapdev.com**
 
 ---
 
