@@ -6,5 +6,4 @@ RUN docker-php-ext-install mysqli
 # Document root
 WORKDIR /var/www/html
 
-# Copy Application Content
 COPY . /var/www/html/

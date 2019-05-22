@@ -108,3 +108,7 @@ Ao finalizar o exercício de exemplo responda as questões propostas no Link aba
 [Questionário de entrega NAC](https://pt.surveymonkey.com/r/9DQ2GFC)
 
 ![QR_code](images/QR_code_9DQ2GFC.png)
+
+---
+
+Creditos do setup do compose: [@PatrickRNG](https://github.com/PatrickRNG)
