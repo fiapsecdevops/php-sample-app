@@ -68,7 +68,7 @@ Para execução da atividade foi provisionado um Host Linux no provedor de núve
 
 3.1 Acesso o servidor usando o Putty:
 
-    Usuário: developer
+    Usuário: ubuntu
     Senha:   (Uso da chave entregue no começo da atividade)
 
 4. Deploy da aplicação:
@@ -105,3 +105,6 @@ docker ps
 
 Ao finalizar o exercício de exemplo responda as questões propostas no Link abaixo:
 
+[Questionário de entrega NAC](https://pt.surveymonkey.com/r/9DQ2GFC)
+
+![QR_code](images/QR_code_9DQ2GFC.png)
