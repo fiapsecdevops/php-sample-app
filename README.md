@@ -68,7 +68,7 @@ Para execução da atividade foi provisionado um Host Linux no provedor de núve
 
 3.1 Acesso o servidor usando o Putty:
 
-    Usuário: ubuntu
+    Usuário: developer
     Senha:   (Uso da chave entregue no começo da atividade)
 
 4. Deploy da aplicação:
